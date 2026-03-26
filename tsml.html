@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TSML Sample Submission Form</title>
+  <meta name="description" content="Tasek Soil & Materials Lab Sdn. Bhd. sample submission and laboratory testing request form." />
+
+  <!-- Open Graph for WhatsApp / Facebook / Telegram preview -->
+  <meta property="og:title" content="TSML Sample Submission Form" />
+  <meta property="og:description" content="Submit your laboratory testing request for soil, aggregate, premix, and concrete services." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://your-domain.com/tsml" />
+  <meta property="og:image" content="https://your-domain.com/tsml-preview.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="TSML Sample Submission Form" />
+  <meta name="twitter:description" content="Submit your laboratory testing request for soil, aggregate, premix, and concrete services." />
+  <meta name="twitter:image" content="https://your-domain.com/tsml-preview.jpg" />
+
+  <style>
+    :root {
+      --tsml-red: #b11c1f;
+      --tsml-dark: #111827;
+      --tsml-gray: #6b7280;
+      --tsml-light: #f8fafc;
+      --tsml-border: #e5e7eb;
+      --tsml-shadow: 0 18px 50px rgba(17, 24, 39, 0.12);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--tsml-dark);
+      background:
+        radial-gradient(circle at top left, rgba(177, 28, 31, 0.08), transparent 28%),
+        linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+      line-height: 1.55;
+    }
+
+    .topbar {
+      height: 10px;
+      background: linear-gradient(90deg, var(--tsml-red), #d53c3f);
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .hero {
+      padding: 44px 0 28px;
+    }
+
+    .hero-card {
+      position: relative;
+      overflow: hidden;
+      background: #fff;
+      border: 1px solid rgba(177, 28, 31, 0.12);
+      border-radius: 28px;
+      box-shadow: var(--tsml-shadow);
+      padding: 40px;
+    }
+
+    .hero-card::before,
+    .hero-card::after {
+      content: "";
+      position: absolute;
+      border-radius: 999px;
+      background: rgba(177, 28, 31, 0.08);
+      z-index: 0;
+    }
+
+    .hero-card::before {
+      width: 300px;
+      height: 300px;
+      top: -140px;
+      right: -80px;
+    }
+
+    .hero-card::after {
+      width: 240px;
+      height: 240px;
+      bottom: -120px;
+      left: -80px;
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1.3fr 0.9fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(177, 28, 31, 0.08);
+      color: var(--tsml-red);
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0 0 14px;
+      font-size: clamp(32px, 5vw, 54px);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+    }
+
+    .highlight { color: var(--tsml-red); }
+
+    .hero p {
+      margin: 0 0 20px;
+      color: var(--tsml-gray);
+      font-size: 17px;
+      max-width: 700px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin: 28px 0 18px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 22px;
+      border-radius: 14px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+      border: 1px solid transparent;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+
+    .btn-primary {
+      background: var(--tsml-red);
+      color: #fff;
+      box-shadow: 0 12px 24px rgba(177, 28, 31, 0.22);
+    }
+
+    .btn-secondary {
+      background: #fff;
+      color: var(--tsml-dark);
+      border-color: var(--tsml-border);
+    }
+
+    .mini-note {
+      font-size: 13px;
+      color: var(--tsml-gray);
+    }
+
+    .hero-panel {
+      background: linear-gradient(180deg, #fff 0%, #fef2f2 100%);
+      border: 1px solid rgba(177, 28, 31, 0.12);
+      border-radius: 24px;
+      padding: 24px;
+    }
+
+    .logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+
+    .hex-logo {
+      width: 78px;
+      height: 68px;
+      position: relative;
+      clip-path: polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%);
+      background: var(--tsml-red);
+      padding: 3px;
+      flex: 0 0 auto;
+    }
+
+    .hex-logo-inner {
+      width: 100%;
+      height: 100%;
+      clip-path: polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%);
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--tsml-red);
+      letter-spacing: 0.04em;
+    }
+
+    .panel-title {
+      margin: 0;
+      font-size: 20px;
+      font-weight: 800;
+    }
+
+    .panel-subtitle {
+      margin: 4px 0 0;
+      color: var(--tsml-gray);
+      font-size: 14px;
+    }
+
+    .service-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .service-item {
+      background: #fff;
+      border: 1px solid var(--tsml-border);
+      border-radius: 16px;
+      padding: 14px;
+      font-weight: 700;
+      color: #374151;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin: 18px 0 0;
+    }
+
+    .stat {
+      background: #fff;
+      border: 1px solid var(--tsml-border);
+      border-radius: 16px;
+      padding: 14px;
+      text-align: center;
+    }
+
+    .stat strong {
+      display: block;
+      color: var(--tsml-red);
+      font-size: 18px;
+      margin-bottom: 4px;
+    }
+
+    .section {
+      padding: 10px 0 32px;
+    }
+
+    .section-title {
+      margin: 0 0 18px;
+      font-size: clamp(24px, 4vw, 36px);
+      letter-spacing: -0.02em;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid var(--tsml-border);
+      border-radius: 22px;
+      padding: 22px;
+      box-shadow: 0 10px 28px rgba(15, 23, 42, 0.05);
+    }
+
+    .card-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: rgba(177, 28, 31, 0.08);
+      color: var(--tsml-red);
+      font-size: 22px;
+      margin-bottom: 14px;
+    }
+
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--tsml-gray);
+      font-size: 14px;
+    }
+
+    .process {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .step {
+      position: relative;
+      background: #fff;
+      border: 1px solid var(--tsml-border);
+      border-radius: 22px;
+      padding: 22px;
+    }
+
+    .step-number {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--tsml-red);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      margin-bottom: 14px;
+    }
+
+    .contact-box {
+      background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
+      color: #fff;
+      border-radius: 28px;
+      padding: 30px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 20px;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .contact-box p {
+      color: rgba(255,255,255,0.82);
+      margin-bottom: 18px;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 10px;
+      color: rgba(255,255,255,0.9);
+    }
+
+    .contact-pill {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 14px 16px;
+      font-size: 14px;
+    }
+
+    footer {
+      padding: 24px 0 50px;
+      color: var(--tsml-gray);
+      font-size: 14px;
+      text-align: center;
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .contact-box,
+      .cards,
+      .process {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .hero-card { padding: 24px; }
+      .hero-grid,
+      .cards,
+      .process,
+      .contact-box,
+      .service-list,
+      .stats {
+        grid-template-columns: 1fr;
+      }
+      .actions { flex-direction: column; }
+      .btn { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar"></div>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-card">
+          <div class="hero-grid">
+            <div>
+              <div class="eyebrow">TSML Laboratory Request Portal</div>
+              <h1>Submit Your <span class="highlight">Testing Request</span> with Confidence</h1>
+              <p>
+                Tasek Soil &amp; Materials Lab Sdn. Bhd. provides laboratory and site testing services for soil, aggregate,
+                premix, and concrete. Use the form below to request testing quickly and clearly.
+              </p>
+
+              <div class="actions">
+                <a class="btn btn-primary" href="https://forms.gle/U5A3YY8phvWitm1DA" target="_blank" rel="noopener noreferrer">Open Google Form</a>
+                <a class="btn btn-secondary" href="#services">View Services</a>
+              </div>
+
+              <div class="mini-note">
+                SAMM 538 accredited laboratory • MS ISO/IEC 17025:2017 scope available upon request
+              </div>
+            </div>
+
+            <div class="hero-panel">
+              <div class="logo-wrap">
+                <div class="hex-logo"><div class="hex-logo-inner">TSML</div></div>
+                <div>
+                  <h2 class="panel-title">Tasek Soil &amp; Materials Lab Sdn. Bhd.</h2>
+                  <p class="panel-subtitle">Specialised in soil, concrete &amp; asphaltic concrete testing</p>
+                </div>
+              </div>
+
+              <div class="service-list">
+                <div class="service-item">Soil Testing</div>
+                <div class="service-item">Aggregate Testing</div>
+                <div class="service-item">Premix Testing</div>
+                <div class="service-item">Concrete Testing</div>
+              </div>
+
+              <div class="stats">
+                <div class="stat">
+                  <strong>SAMM 538</strong>
+                  Accredited
+                </div>
+                <div class="stat">
+                  <strong>2005</strong>
+                  Since
+                </div>
+                <div class="stat">
+                  <strong>Ipoh</strong>
+                  Perak
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <h2 class="section-title">Core Testing Services</h2>
+        <div class="cards">
+          <article class="card">
+            <div class="card-icon">🧪</div>
+            <h3>Soil &amp; Filling Material</h3>
+            <p>Atterberg Limits, Sieve Analysis, Proctor Test, Field Density Test, CBR, Moisture Content, Mackintosh Probe, and DCP.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">🪨</div>
+            <h3>Aggregate</h3>
+            <p>ACV, AIV, Flakiness, Elongation, Water Absorption, Los Angeles Abrasion, Particle Size Distribution, and more.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">🛣️</div>
+            <h3>Premix / Asphalt</h3>
+            <p>Bitumen Content, Marshall Test, Mix Design, Coring, Density &amp; Compaction, Thickness, CIPR, and IRI-related work.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">🏗️</div>
+            <h3>Concrete</h3>
+            <p>Concrete Cube Compression Test, Concrete Core Compression Test, Coring, and Rebound Hammer testing.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">How It Works</h2>
+        <div class="process">
+          <div class="step">
+            <div class="step-number">1</div>
+            <h3>Fill in the form</h3>
+            <p>Enter your company details, project information, material type, and required test items.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <h3>Upload relevant files</h3>
+            <p>Attach sample photos, drawings, site information, or supporting documents if needed.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <h3>TSML team reviews</h3>
+            <p>Our team checks your submission and contacts you for confirmation, scope, and scheduling.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">4</div>
+            <h3>Testing proceeds</h3>
+            <p>Laboratory or site testing is arranged based on your selected service and project requirements.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="contact-box">
+          <div>
+            <h2 class="section-title" style="margin:0 0 10px; color:#fff;">Ready to Submit?</h2>
+            <p>
+              Open the official TSML request form and send your testing requirement directly.
+              This landing page is designed so your shared link can look more professional and support image preview once hosted properly.
+            </p>
+            <div class="actions" style="margin:0;">
+              <a class="btn btn-primary" href="https://forms.gle/U5A3YY8phvWitm1DA" target="_blank" rel="noopener noreferrer">Go to TSML Form</a>
+            </div>
+          </div>
+          <div class="contact-list">
+            <div class="contact-pill"><strong>Address:</strong><br />No. M-82, Susuran Anjung Tawas, Anjung Tawas Sinaran, 30010 Ipoh, Perak Darul Ridzuan</div>
+            <div class="contact-pill"><strong>Tel / Fax:</strong> 05-2919096</div>
+            <div class="contact-pill"><strong>Mobile:</strong> 012-5219003 / 010-3790741</div>
+            <div class="contact-pill"><strong>Email:</strong> taseksoillab@gmail.com</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © TSML Landing Page • Replace <code>og:url</code> and <code>og:image</code> with your real hosted URLs for WhatsApp preview.
+    </div>
+  </footer>
+</body>
+</html>
